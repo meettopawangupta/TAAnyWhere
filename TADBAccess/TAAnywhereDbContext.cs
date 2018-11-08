@@ -17,7 +17,8 @@ namespace TADBAccess
         public DbSet<TAPurpose> TAPurposes { get; set; }
         public DbSet<TAEmployee> TAEmployees { get; set; }
         public DbSet<TAHeader> TAHeaders { get; set; }
-
+        public DbSet<Resource> TAI18NResource
+        { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);

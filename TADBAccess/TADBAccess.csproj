@@ -55,6 +55,10 @@
     <Compile Include="Migrations\201809151434210_update.Designer.cs">
       <DependentUpon>201809151434210_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811081205463_AddResourceTable.cs" />
+    <Compile Include="Migrations\201811081205463_AddResourceTable.Designer.cs">
+      <DependentUpon>201811081205463_AddResourceTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TAAnywhereDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809151434210_update.resx">
       <DependentUpon>201809151434210_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081205463_AddResourceTable.resx">
+      <DependentUpon>201811081205463_AddResourceTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

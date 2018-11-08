@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,11 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entites\TAEmployee.cs" />
-    <Compile Include="Entites\TAHeader.cs" />
-    <Compile Include="Entites\TAPurpose.cs" />
-    <Compile Include="Entites\TATravelType.cs" />
+    <Compile Include="Abstract\BaseResourceProvider.cs" />
+    <Compile Include="Abstract\IResourceProvider.cs" />
+    <Compile Include="Concrete\DbResourceProvider.cs" />
+    <Compile Include="Concrete\XmlResourceProvider.cs" />
+    <Compile Include="Entities\TAEmployee.cs" />
+    <Compile Include="Entities\TAHeader.cs" />
+    <Compile Include="Entities\TAPurpose.cs" />
+    <Compile Include="Entities\TATravelType.cs" />
+    <Compile Include="Entities\Resource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ResourceBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
