@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAAnywhereWebApi", "TAAnywhereWebApi\TAAnywhereWebApi.csproj", "{4E817EB7-F44D-434A-8736-07B10484AB89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TADBAccess", "TADBAccess\TADBAccess.csproj", "{7AB85823-3400-4F23-912B-6B232DF29821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModels", "DomainModels\DomainModels.csproj", "{19B08778-EDAA-470A-A73D-D9FD7AC95FE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{D1257EEF-F421-447B-AE44-3E0A0B1450BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TADBAccessOracle", "TADBAccessOracle\TADBAccessOracle.csproj", "{0721F524-D3E0-4C50-8600-BDA69D68D9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAAnywhereUI", "TAAnywhereUI\TAAnywhereUI.csproj", "{E7AD2F98-E23B-4648-A844-FAB3125B228D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E817EB7-F44D-434A-8736-07B10484AB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E817EB7-F44D-434A-8736-07B10484AB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E817EB7-F44D-434A-8736-07B10484AB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E817EB7-F44D-434A-8736-07B10484AB89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB85823-3400-4F23-912B-6B232DF29821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB85823-3400-4F23-912B-6B232DF29821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB85823-3400-4F23-912B-6B232DF29821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB85823-3400-4F23-912B-6B232DF29821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B08778-EDAA-470A-A73D-D9FD7AC95FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B08778-EDAA-470A-A73D-D9FD7AC95FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B08778-EDAA-470A-A73D-D9FD7AC95FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B08778-EDAA-470A-A73D-D9FD7AC95FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1257EEF-F421-447B-AE44-3E0A0B1450BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1257EEF-F421-447B-AE44-3E0A0B1450BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1257EEF-F421-447B-AE44-3E0A0B1450BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1257EEF-F421-447B-AE44-3E0A0B1450BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0721F524-D3E0-4C50-8600-BDA69D68D9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0721F524-D3E0-4C50-8600-BDA69D68D9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0721F524-D3E0-4C50-8600-BDA69D68D9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0721F524-D3E0-4C50-8600-BDA69D68D9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AD2F98-E23B-4648-A844-FAB3125B228D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AD2F98-E23B-4648-A844-FAB3125B228D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AD2F98-E23B-4648-A844-FAB3125B228D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AD2F98-E23B-4648-A844-FAB3125B228D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
