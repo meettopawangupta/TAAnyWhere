@@ -10,6 +10,8 @@ namespace DomainModels.Entites
     [Table("TA_Purpose")]
     public class TAPurpose
     {
+
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public Int64 TravelPurposePkId { get; set; }
