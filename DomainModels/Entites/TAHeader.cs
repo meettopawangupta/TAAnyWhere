@@ -11,6 +11,7 @@ namespace DomainModels.Entites
     public class TAHeader
     {
 
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Int64 TAHeaderPkId { get; set; }
