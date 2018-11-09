@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Resources.Abstract;
-using DomainModels.Entites;
+using Resources.Entities;
 
 namespace Resources.Concrete
 {
@@ -25,9 +25,9 @@ namespace Resources.Concrete
             connectionString = connection;
         }
 
-        protected override IList<Resource> ReadResources()
+        protected override IList<ResourceEntry> ReadResources()
         {
-            var resources = new List<Resource>();
+            var resources = new List<ResourceEntry>();
 
             const string sql = "select Culture, Name, Value from dbo.Resources;";
 
@@ -38,8 +38,7 @@ namespace Resources.Concrete
 
                 using (var reader = cmd.ExecuteReader()) {
                     while (reader.Read()) {
-                        resources.Add(new Resource
-                        { 
+                        resources.Add(new ResourceEntry { 
                             Name = reader["Name"].ToString(),
                             Value = reader["Value"].ToString(),
                             Culture = reader["Culture"].ToString()
@@ -54,9 +53,9 @@ namespace Resources.Concrete
             
         }
 
-        protected override Resource ReadResource(string name, string culture)
+        protected override ResourceEntry ReadResource(string name, string culture)
         {
-            Resource resource = null;
+            ResourceEntry resource = null;
 
             const string sql = "select Culture, Name, Value from dbo.Resources where culture = @culture and name = @name;";
 
@@ -70,8 +69,7 @@ namespace Resources.Concrete
 
                 using (var reader = cmd.ExecuteReader()) {
                     if (reader.Read()) {
-                        resource = new Resource
-                        {
+                        resource = new ResourceEntry {
                             Name = reader["Name"].ToString(),
                             Value = reader["Value"].ToString(),
                             Culture = reader["Culture"].ToString()

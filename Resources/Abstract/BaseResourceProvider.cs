@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DomainModels.Entites;
+using Resources.Entities;
 
 namespace Resources.Abstract
 {
     public abstract class BaseResourceProvider: IResourceProvider
     {
         // Cache list of resources
-        private static Dictionary<string, Resource> resources = null;
+        private static Dictionary<string, ResourceEntry> resources = null;
         private static object lockResources = new object();
 
         public BaseResourceProvider() {
@@ -60,7 +60,7 @@ namespace Resources.Abstract
         /// Returns all resources for all cultures. (Needed for caching)
         /// </summary>
         /// <returns>A list of resources</returns>
-        protected abstract IList<Resource> ReadResources();
+        protected abstract IList<ResourceEntry> ReadResources();
 
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Resources.Abstract
         /// <param name="name">Resorce name (ie key)</param>
         /// <param name="culture">Culture code</param>
         /// <returns>Resource</returns>
-        protected abstract Resource ReadResource(string name, string culture);
+        protected abstract ResourceEntry ReadResource(string name, string culture);
         
     }
 }

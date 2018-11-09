@@ -7,9 +7,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Resources.Abstract;
-using DomainModels.Entites;
+using Resources.Entities;
 
-namespace DomainModels.Utility
+namespace Resources.Utility
 {
     public class ResourceBuilder
     {
@@ -27,7 +27,7 @@ namespace DomainModels.Utility
             // Retrieve all resources           
             MethodInfo method = provider.GetType().GetMethod("ReadResources", BindingFlags.Instance | BindingFlags.NonPublic);
 
-            IList<Resource> resources = method.Invoke(provider, null) as List<Resource>;
+            IList<ResourceEntry> resources = method.Invoke(provider, null) as List<ResourceEntry>;
 
             if (resources == null || resources.Count == 0)
                 throw new Exception(string.Format("No resources were found in {0}", provider.GetType().Name));
