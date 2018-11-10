@@ -49,12 +49,14 @@
   <ItemGroup>
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Implementation\ResourceBuilder.cs" />
     <Compile Include="Repository\Implementation\ResourceProvider.cs" />
     <Compile Include="Repository\Implementation\Security.cs" />
     <Compile Include="Repository\Implementation\TAEmployeeRepository.cs" />
     <Compile Include="Repository\Implementation\Repository.cs" />
     <Compile Include="Repository\Implementation\TAPurposeRepository.cs" />
     <Compile Include="Repository\Implementation\TATravelTypeRepository.cs" />
+    <Compile Include="Repository\Interface\IResourceBuilder.cs" />
     <Compile Include="Repository\Interface\IResourceProvider.cs" />
     <Compile Include="Repository\Interface\ISecurity.cs" />
     <Compile Include="Repository\Interface\ITAEmployeeRepository.cs" />

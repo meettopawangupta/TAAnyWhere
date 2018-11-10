@@ -54,6 +54,10 @@ namespace Repository
             }
         }
         #endregion
+
+        #region Resources
+            
+        #endregion
         public async Task<int> SaveChangesAsync()
         {
             return await db.SaveChangesAsync();
