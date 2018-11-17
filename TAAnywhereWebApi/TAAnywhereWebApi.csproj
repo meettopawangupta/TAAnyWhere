@@ -108,6 +108,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ResourceController.cs" />
     <Compile Include="Controllers\TAEmployeeController.cs" />
     <Compile Include="Controllers\TAPurposeController.cs" />
     <Compile Include="Controllers\TATravelTypeController.cs" />

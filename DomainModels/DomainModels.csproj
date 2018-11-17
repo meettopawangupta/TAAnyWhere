@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntitiesOracle\TATravelType.cs" />
     <Compile Include="Entities\TAEmployee.cs" />
     <Compile Include="Entities\TAHeader.cs" />
     <Compile Include="Entities\TAPurpose.cs" />

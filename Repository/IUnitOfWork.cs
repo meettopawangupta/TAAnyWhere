@@ -1,4 +1,5 @@
-﻿using Repository.Repository.Interface;
+﻿using Repository.Repository.Implementation;
+using Repository.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,9 @@ namespace Repository
         ITATravelTypeRepository TATravelTypeRepo { get;}
         ITAPurposeRepository TAPurposeRepo { get;}
         ITAEmployeeRepository TAEmployeeRepo { get; }
+        IResourceBuilder ResourceBuilderRepo { get; }
+        IResourceProvider ResourceProviderRepo { get; }
+        ResourceProvider GetResourceProvider { get; }
         Task<int> SaveChangesAsync();
     }
 }

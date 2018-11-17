@@ -62,9 +62,10 @@ namespace Repository.Repository.Implementation
                 return null;
         }
 
-        public async Task<IEnumerable<Resource>> ReadResources()
+        public IEnumerable<Resource> ReadResources()
         {
-            return await GetAll();
+            List<Resource> x = db.Set<Resource>().ToList();
+            return  x;
         }
 
     }

@@ -2,6 +2,7 @@
 using Repository.Repository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -12,9 +13,14 @@ namespace Repository.Repository.Implementation
 {
     public class ResourceBuilder : IResourceBuilder
     {
+        DbContext db;
+        public ResourceBuilder(DbContext _db)
+        {
+            db = _db;
+        }
         public string Create(ResourceProvider provider, string namespaceName = "Resources", string className = "Resources", string filePath = null, string summaryCulture = null)
         {
-            MethodInfo method = provider.GetType().GetMethod("ReadResources", BindingFlags.Instance | BindingFlags.NonPublic);
+            MethodInfo method = provider.GetType().GetMethod("ReadResources");
             IList<Resource> resources = method.Invoke(provider, null) as List<Resource>;
 
             if (resources == null || resources.Count == 0)
@@ -63,9 +69,14 @@ namespace {0} {{
                 }
 
                 sbKeys.Append(new String(' ', 12)); // indentation
+                // Never Delete it
+                /* sbKeys.AppendFormat(property, key,
+                        summaryCulture == null ? string.Empty : string.Format("/// <summary>{0}</summary>", resource.Value),
+                        resource.Type);*/
+                //
                 sbKeys.AppendFormat(property, key,
                     summaryCulture == null ? string.Empty : string.Format("/// <summary>{0}</summary>", resource.Value),
-                    resource.Type);
+                    "string");
                 sbKeys.AppendLine();
             }
 
