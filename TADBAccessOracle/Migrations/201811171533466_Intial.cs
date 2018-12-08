@@ -8,7 +8,7 @@ namespace TADBAccessOracle.Migrations
         public override void Up()
         {
             CreateTable(
-                "TAAnywhere.TA_TravelType",
+                "SYS.TA_TravelType",
                 c => new
                     {
                         TravelTypePkId = c.Decimal(nullable: false, precision: 19, scale: 0),
@@ -21,7 +21,7 @@ namespace TADBAccessOracle.Migrations
         
         public override void Down()
         {
-            DropTable("TAAnywhere.TA_TravelType");
+            DropTable("SYS.TA_TravelType");
         }
     }
 }
