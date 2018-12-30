@@ -1,0 +1,20 @@
+﻿@model  DomainModels.Entites.TAEmployee
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+   
+}
+
+<h2>Registration</h2>
+<div class="col-sm-4 col-xs-4">
+    <div class='form - group'>
+        <label for="txtEmployeeName">Employee Name</label>
+        @Html.CustomTextBoxFor(model => model.EmployeeName, "text", "primary")
+    </div>
+
+    <div class='form - group'>
+        <label for="txtUserName">User Name</label>
+        @Html.CustomTextBoxFor(model => model.UserName, "text", "primary")
+    </div>
+</div>

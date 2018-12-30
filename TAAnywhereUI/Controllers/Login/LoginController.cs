@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TAAnywhereUI.Controllers.Home
+namespace TAAnywhereUI.Controllers.Login
 {
-    public class HomeController : Controller
+    public class LoginController : Controller
     {
-        // GET: Home
-        public ActionResult Index()
+        // GET: Login
+        public ActionResult Login()
         {
             return View();
         }

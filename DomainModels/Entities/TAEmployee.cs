@@ -27,5 +27,15 @@ namespace DomainModels.Entites
         [Required]
         [Column(TypeName = "Nvarchar")]
         public string Password { get; set; }
+
+        [Required]
+        [Column(TypeName = "Nvarchar")]
+        [StringLength(50)]
+        [EmailAddress(ErrorMessage ="Invalid Email Address")]
+        public string Email { get; set; }
+
+       
+        [Column(TypeName = "bigint")]
+         public Int64 Phone { get; set; }
     }
 }

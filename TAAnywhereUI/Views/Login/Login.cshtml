@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login !</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="col-sm-4 col-xs-4">
+        @Html.GetLoginFormObject("primary")  @Html.ActionLink("Register ?", "Index", "Registration")
+    </div>
+
+}
