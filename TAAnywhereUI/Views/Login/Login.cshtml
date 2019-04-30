@@ -1,6 +1,6 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
 <h2>Login !</h2>
@@ -8,7 +8,11 @@
 @using (Html.BeginForm())
 {
     <div class="col-sm-4 col-xs-4">
-        @Html.GetLoginFormObject("primary")  @Html.ActionLink("Register ?", "Index", "Registration")
+        
+        @Html.GetLoginFormObject(Convert.ToString( HttpContext.Current.Application["Theme"]))  
+        @Html.ActionLink("Register ?", "Index", "Registration")
+
+       
     </div>
 
 }

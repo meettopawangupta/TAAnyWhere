@@ -13,6 +13,7 @@ namespace TAAnywhereUI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            HttpContext.Current.Application["Theme"] = "success";
         }
     }
 }

@@ -3,18 +3,50 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/MasterLayout.cshtml";
-   
+    string ThemeClass = Convert.ToString(HttpContext.Current.Application["Theme"]);
 }
 
 <h2>Registration</h2>
+@using (Html.BeginForm("Index","Registration"))
+{
 <div class="col-sm-4 col-xs-4">
-    <div class='form - group'>
-        <label for="txtEmployeeName">Employee Name</label>
-        @Html.CustomTextBoxFor(model => model.EmployeeName, "text", "primary")
+    <div class='form-group'>
+        <label for="EmployeeName">Employee Name</label>
+        @*@Html.CustomTextBoxFor(model => model.EmployeeName, "text", ThemeClass)*@
+       
+        @Html.MyEditorFor(model => model.EmployeeName,"text" , ThemeClass + " " + "form-control")
+        @Html.ValidationMessageFor(model => model.EmployeeName, "", new { @class = "text-danger" })
     </div>
 
-    <div class='form - group'>
-        <label for="txtUserName">User Name</label>
-        @Html.CustomTextBoxFor(model => model.UserName, "text", "primary")
+    <div class='form-group'>
+        <label for="UserName">User Name</label>
+        
+        @Html.MyEditorFor(model => model.UserName,"text" , ThemeClass + " " + "form-control")
+        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class='form-group'>
+        <label for="Password">Password</label>
+        @Html.MyEditorFor(model => model.Password,"text" , ThemeClass + " " + "form-control")
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+    </div>
+    <div class='form-group'>
+        <label for="Email">Email</label>
+        @Html.MyEditorFor(model => model.Email,"text" , ThemeClass + " " + "form-control")
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class='form-group'>
+        <label for="Phone">Phone</label>
+        @Html.MyEditorFor(model => model.Phone,"text" , ThemeClass + " " + "form-control")
+    </div>
+    <br />
+    <div class='form-group'>
+        @Html.SubmitButton("Register", "btnSubmit", ThemeClass)
     </div>
 </div>
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

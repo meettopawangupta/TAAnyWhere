@@ -14,5 +14,11 @@ namespace TAAnywhereUI.Controllers.Login
         {
            return View();
         }
+
+        [HttpPost]
+        public ActionResult Index(TAEmployee _newEmp)
+        {
+            return View();
+        }
     }
 }

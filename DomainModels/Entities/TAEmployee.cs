@@ -14,21 +14,21 @@ namespace DomainModels.Entites
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Int64 EmployeePkId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Employee name required")]
         [Column(TypeName ="Nvarchar")]
         [StringLength(50)]
         public String EmployeeName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="User name required")]
         [Column(TypeName = "Nvarchar")]
-        [StringLength(50)]
+        [StringLength(50,MinimumLength =3)]
         public String UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Password required")]
         [Column(TypeName = "Nvarchar")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Email required")]
         [Column(TypeName = "Nvarchar")]
         [StringLength(50)]
         [EmailAddress(ErrorMessage ="Invalid Email Address")]
